@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Deriv Bot Extractor</title>
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+</head><body>
+<header><div><span class="led"></span><b>LIVE BOT EXTRACTOR</b></div><span class="badge">PLAYWRIGHT ENGINE</span></header>
+<main>
+<section class="hero">
+<h1>Extract trading bots from public sites</h1>
+<p>Rendered-site discovery for public Deriv/Binary bot pages. The extractor checks page content, frames, scripts, embedded URLs and visible download links.</p>
+<div class="search"><input id="url" value="https://www.binarytool.site/#Freebots"><button id="scan">EXTRACT BOTS</button></div>
+<div id="status">Ready.</div>
+</section>
+<section class="stats hidden" id="stats">
+<div><strong id="total">0</strong><span>live bots</span></div>
+<div><strong id="special">0</strong><span>special</span></div>
+<div><strong id="standard">0</strong><span>standard</span></div>
+<div><strong id="pages">0</strong><span>pages scanned</span></div>
+</section>
+<section class="notice"><b>Access note:</b> This tool only retrieves publicly accessible content. It does not bypass login, CAPTCHA, Cloudflare, paywalls, or private/protected APIs.</section>
+<section class="controls hidden" id="controls">
+<input id="filter" placeholder="🔍 Search live bots">
+<button class="tab active" data-filter="all">All</button><button class="tab" data-filter="Special">Special</button><button class="tab" data-filter="Standard">Standard</button>
+<button id="selectAll" class="dark">Add all to ZIP</button>
+</section>
+<section id="results"></section>
+</main>
+<div id="modal" class="modal hidden"><div class="box"><button id="close">×</button><h2 id="mtitle"></h2><pre id="preview">Loading...</pre><button id="copy">COPY XML</button></div></div>
+<script src="/js/app.js"></script></body></html>

@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: deriv-bot-scanner
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: "0"
